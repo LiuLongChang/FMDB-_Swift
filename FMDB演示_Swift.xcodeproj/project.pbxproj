@@ -7,14 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60F020FDFDBBAEBF1FE46E4A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F03AC3B009A2CB8AB87F15 /* libPods.a */; };
 		943ACE061C05A2880068868B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE051C05A2880068868B /* AppDelegate.swift */; };
 		943ACE081C05A2880068868B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE071C05A2880068868B /* ViewController.swift */; };
 		943ACE0B1C05A2880068868B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE091C05A2880068868B /* Main.storyboard */; };
 		943ACE0D1C05A2880068868B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE0C1C05A2880068868B /* Assets.xcassets */; };
 		943ACE101C05A2880068868B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE0E1C05A2880068868B /* LaunchScreen.storyboard */; };
+		943ACE181C05A4000068868B /* BKNotices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE171C05A4000068868B /* BKNotices.swift */; };
+		943ACE1B1C05B0B40068868B /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE191C05B0B40068868B /* fail.png */; };
+		943ACE1C1C05B0B40068868B /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE1A1C05B0B40068868B /* success.png */; };
+		943ACE1E1C05B1300068868B /* BKAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE1D1C05B1300068868B /* BKAddressViewController.swift */; };
+		943ACE211C05B9C30068868B /* BKDataFromDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE201C05B9C30068868B /* BKDataFromDataBase.swift */; };
+		943FE8571C0694770071E786 /* BKAddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FE8561C0694770071E786 /* BKAddUserViewController.swift */; };
+		943FE8591C06A9AA0071E786 /* BKAddressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FE8581C06A9AA0071E786 /* BKAddressViewCell.swift */; };
+		943FE85B1C06B0870071E786 /* BKSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FE85A1C06B0870071E786 /* BKSearchViewController.swift */; };
+		943FE85D1C06D6860071E786 /* BKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FE85C1C06D6860071E786 /* BKDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B0EB68B6D7A26F398666FB9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		60F03AC3B009A2CB8AB87F15 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		943ACE021C05A2880068868B /* FMDB演示_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FMDB演示_Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		943ACE051C05A2880068868B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		943ACE071C05A2880068868B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +34,17 @@
 		943ACE0C1C05A2880068868B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		943ACE0F1C05A2880068868B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		943ACE111C05A2880068868B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		943ACE171C05A4000068868B /* BKNotices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKNotices.swift; sourceTree = "<group>"; };
+		943ACE191C05B0B40068868B /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
+		943ACE1A1C05B0B40068868B /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
+		943ACE1D1C05B1300068868B /* BKAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKAddressViewController.swift; sourceTree = "<group>"; };
+		943ACE1F1C05B5A10068868B /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
+		943ACE201C05B9C30068868B /* BKDataFromDataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKDataFromDataBase.swift; sourceTree = "<group>"; };
+		943FE8561C0694770071E786 /* BKAddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKAddUserViewController.swift; sourceTree = "<group>"; };
+		943FE8581C06A9AA0071E786 /* BKAddressViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKAddressViewCell.swift; sourceTree = "<group>"; };
+		943FE85A1C06B0870071E786 /* BKSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKSearchViewController.swift; sourceTree = "<group>"; };
+		943FE85C1C06D6860071E786 /* BKDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKDetailViewController.swift; sourceTree = "<group>"; };
+		A01C59400E25DF09FAF00F76 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +52,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F020FDFDBBAEBF1FE46E4A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73E6130113079E3D2BE684D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60F03AC3B009A2CB8AB87F15 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		943ACDF91C05A2880068868B = {
 			isa = PBXGroup;
 			children = (
 				943ACE041C05A2880068868B /* FMDB演示_Swift */,
 				943ACE031C05A2880068868B /* Products */,
+				C30482F8A9DCACEE14AB46D8 /* Pods */,
+				73E6130113079E3D2BE684D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +90,31 @@
 			children = (
 				943ACE051C05A2880068868B /* AppDelegate.swift */,
 				943ACE071C05A2880068868B /* ViewController.swift */,
+				943ACE171C05A4000068868B /* BKNotices.swift */,
+				943FE8561C0694770071E786 /* BKAddUserViewController.swift */,
+				943FE85A1C06B0870071E786 /* BKSearchViewController.swift */,
+				943FE85C1C06D6860071E786 /* BKDetailViewController.swift */,
+				943ACE1D1C05B1300068868B /* BKAddressViewController.swift */,
+				943FE8581C06A9AA0071E786 /* BKAddressViewCell.swift */,
+				943ACE201C05B9C30068868B /* BKDataFromDataBase.swift */,
+				943ACE191C05B0B40068868B /* fail.png */,
+				943ACE1A1C05B0B40068868B /* success.png */,
+				943ACE1F1C05B5A10068868B /* Bridge.h */,
 				943ACE091C05A2880068868B /* Main.storyboard */,
 				943ACE0C1C05A2880068868B /* Assets.xcassets */,
 				943ACE0E1C05A2880068868B /* LaunchScreen.storyboard */,
 				943ACE111C05A2880068868B /* Info.plist */,
 			);
 			path = "FMDB演示_Swift";
+			sourceTree = "<group>";
+		};
+		C30482F8A9DCACEE14AB46D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A01C59400E25DF09FAF00F76 /* Pods.debug.xcconfig */,
+				4B0EB68B6D7A26F398666FB9 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 943ACE141C05A2880068868B /* Build configuration list for PBXNativeTarget "FMDB演示_Swift" */;
 			buildPhases = (
+				5172E6671B57B22177FBE807 /* Check Pods Manifest.lock */,
 				943ACDFE1C05A2880068868B /* Sources */,
 				943ACDFF1C05A2880068868B /* Frameworks */,
 				943ACE001C05A2880068868B /* Resources */,
+				0C8CAA91086487854AED1C65 /* Embed Pods Frameworks */,
+				74A89C9836D209327C97402C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,18 +180,75 @@
 			files = (
 				943ACE101C05A2880068868B /* LaunchScreen.storyboard in Resources */,
 				943ACE0D1C05A2880068868B /* Assets.xcassets in Resources */,
+				943ACE1C1C05B0B40068868B /* success.png in Resources */,
 				943ACE0B1C05A2880068868B /* Main.storyboard in Resources */,
+				943ACE1B1C05B0B40068868B /* fail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C8CAA91086487854AED1C65 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5172E6671B57B22177FBE807 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		74A89C9836D209327C97402C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		943ACDFE1C05A2880068868B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				943FE8571C0694770071E786 /* BKAddUserViewController.swift in Sources */,
+				943FE85B1C06B0870071E786 /* BKSearchViewController.swift in Sources */,
+				943ACE181C05A4000068868B /* BKNotices.swift in Sources */,
+				943ACE211C05B9C30068868B /* BKDataFromDataBase.swift in Sources */,
+				943FE85D1C06D6860071E786 /* BKDetailViewController.swift in Sources */,
 				943ACE081C05A2880068868B /* ViewController.swift in Sources */,
+				943ACE1E1C05B1300068868B /* BKAddressViewController.swift in Sources */,
+				943FE8591C06A9AA0071E786 /* BKAddressViewCell.swift in Sources */,
 				943ACE061C05A2880068868B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,23 +360,27 @@
 		};
 		943ACE151C05A2880068868B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A01C59400E25DF09FAF00F76 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "FMDB演示_Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LangYue-China.FMDB---Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FMDB演示_Swift/Bridge.h";
 			};
 			name = Debug;
 		};
 		943ACE161C05A2880068868B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B0EB68B6D7A26F398666FB9 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "FMDB演示_Swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LangYue-China.FMDB---Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/FMDB演示_Swift/Bridge.h";
 			};
 			name = Release;
 		};
@@ -286,6 +403,7 @@
 				943ACE161C05A2880068868B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

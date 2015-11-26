@@ -16,6 +16,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        let tabbar = UITabBarController()
+        
+        
+        let addressVC = BKAddressViewController()
+        let addressNC = UINavigationController(rootViewController: addressVC)
+        addressNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Contacts, tag: 101)
+        
+        
+        
+        
+        let addUserVC = BKAddUserViewController()
+        let addUserNC = UINavigationController(rootViewController: addUserVC)
+        addUserNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Favorites, tag: 102)
+        
+        
+        
+        let searchVC = BKSearchViewController()
+        let searchNC = UINavigationController(rootViewController: searchVC)
+        searchNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Search, tag: 103)
+        
+        
+        
+        tabbar.viewControllers = [addressNC,addUserNC,searchNC]
+        
+        self.window?.rootViewController = tabbar
+        
+        
+        
         return true
     }
 
