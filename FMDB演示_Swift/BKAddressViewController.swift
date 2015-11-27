@@ -13,9 +13,8 @@ class BKAddressViewController: UITableViewController {
     
     
     var paths : NSString!
-    var nameArray : NSMutableArray!
-    var ageArray : NSMutableArray!
-    var IDArray : NSMutableArray!
+    
+    var dataArray : NSMutableArray!
     
     
     
@@ -33,13 +32,6 @@ class BKAddressViewController: UITableViewController {
         self.tableView.registerClass(BKAddressViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "modifyDatabase")
         
-        
-//        self.nameArray = NSMutableArray(capacity: 0)
-//        self.ageArray = NSMutableArray(capacity: 0)
-//        self.IDArray = NSMutableArray(capacity: 0)
-        
-        
-        
     }
     
     
@@ -49,11 +41,10 @@ class BKAddressViewController: UITableViewController {
         let document = paths.objectAtIndex(0)
         let path = document.stringByAppendingPathComponent("USER.sqlite")
         self.paths = path
-        // sentense above 3 is necessary
         
-        self.nameArray = NSMutableArray()
-        self.ageArray = NSMutableArray()
-        self.IDArray = NSMutableArray()
+        
+        self.dataArray = NSMutableArray()
+        
         self.createTable()
         self.getAllDatabase()
         
@@ -70,7 +61,7 @@ class BKAddressViewController: UITableViewController {
             let db = FMDatabase(path: self.paths as String)
             if(db.open()){
                 
-                let sql = "CREATE TABLE 'USER'('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,'name' VARCHAR(20),'age' VARCHAR(20),'idcode' VARCHAR(30))"
+                let sql = "CREATE TABLE 'USER'('id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,'name' VARCHAR(20),'score' VARCHAR(20),'idcode' VARCHAR(30))"
                 let success =  db.executeUpdate(sql, withParameterDictionary: nil) as Bool
                 
                 if(!success){
@@ -105,18 +96,19 @@ class BKAddressViewController: UITableViewController {
             let rs = db.executeQuery(sql, withParameterDictionary: nil)
             while(rs.next()){
                 
+                
+                var product : Product
+                
                 let name = rs.stringForColumn("name")
-                let age = rs.stringForColumn("age")
+                let score = rs.stringForColumn("score")
                 let ID = rs.stringForColumn("idcode")
                 
-                self.nameArray.addObject(name)
-                self.ageArray.addObject(age)
-                self.IDArray.addObject(ID)
+                product = Product(name: name, score: score, ID: ID)
+                self.dataArray.addObject(product)
                
             }
             
-            
-            BKDataFromDataBase.shareInstance().nameArrayFromClass.arrayByAddingObjectsFromArray(self.nameArray as [AnyObject])
+            BKDataFromDataBase.shareInstance().nameArrayFromClass.arrayByAddingObjectsFromArray(self.dataArray as [AnyObject] )
             
             db.close()
             self.tableView.reloadData()
@@ -144,19 +136,13 @@ class BKAddressViewController: UITableViewController {
             
             let addUser : BKAddUserViewController = BKAddUserViewController()
             addUser.operateType = 1
-            BKDataFromDataBase.shareInstance().nameFromClass = self.nameArray.objectAtIndex((indexPath?.row)!-1) as! NSString
-            BKDataFromDataBase.shareInstance().IDFromClass = self.IDArray.objectAtIndex((indexPath?.row)!-1) as! NSString
-            BKDataFromDataBase.shareInstance().ageFromClass = self.ageArray.objectAtIndex((indexPath?.row)!-1) as! NSString
             
+            BKDataFromDataBase.shareInstance().nameFromClass = (self.dataArray.objectAtIndex((indexPath?.row)!-1) as! Product).name
+            BKDataFromDataBase.shareInstance().IDFromClass = (self.dataArray.objectAtIndex((indexPath?.row)!-1) as! Product).ID
+            BKDataFromDataBase.shareInstance().scoreFromClass = (self.dataArray.objectAtIndex((indexPath?.row)!-1) as! Product).score
             self.navigationController?.pushViewController(addUser, animated: true)
             
-            
-            
         }
-        
-        
-        
-        
         
     }
     
@@ -181,7 +167,7 @@ class BKAddressViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.nameArray.count + 1
+        return self.dataArray.count + 1
     }
 
     
@@ -195,13 +181,15 @@ class BKAddressViewController: UITableViewController {
         
         
         if(indexPath.row == 0){
-            cell.nameLabel.text = "姓名"
-            cell.ageLabel.text = "年龄"
-            cell.ID.text = "ID"
+            cell.nameLabel.text = "姓名/昵称"
+            cell.scoreLabel.text = "分值"
+            cell.ID.text = "队员ID号"
         }else{
-            cell.nameLabel.text = self.nameArray.objectAtIndex(indexPath.row-1) as? String
-            cell.ageLabel.text = self.ageArray.objectAtIndex(indexPath.row-1) as? String
-            cell.ID.text = self.IDArray.objectAtIndex(indexPath.row-1) as? String
+            
+            cell.nameLabel.text = (self.dataArray.objectAtIndex(indexPath.row-1) as? Product)?.name
+            cell.scoreLabel.text = (self.dataArray.objectAtIndex(indexPath.row-1) as? Product)?.score
+            cell.ID.text = (self.dataArray.objectAtIndex(indexPath.row-1) as? Product)?.ID
+            
         }
         
         // Configure the cell...

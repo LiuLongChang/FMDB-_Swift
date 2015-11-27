@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
-        let searchVC = BKSearchViewController()
+        let searchVC = MainTableViewController()
         let searchNC = UINavigationController(rootViewController: searchVC)
         searchNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Search, tag: 103)
         

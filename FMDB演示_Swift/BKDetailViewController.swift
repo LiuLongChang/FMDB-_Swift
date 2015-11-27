@@ -12,7 +12,7 @@ class BKDetailViewController: UIViewController {
     
     var dbPath : NSString!
     var nameStr : NSString!
-    var ageStr : NSString!
+    var scoreStr : NSString!
     var IDsStr : NSString!
     
     
@@ -29,8 +29,8 @@ class BKDetailViewController: UIViewController {
         
         
         self.title = "详细信息"
-        let array = NSArray(objects: "姓名","年龄","ID:")
-        let array2 = NSArray(objects: self.nameStr,self.ageStr,self.IDsStr)
+        let array = NSArray(objects: "姓名","分值","ID:")
+        let array2 = NSArray(objects: self.nameStr,self.scoreStr,self.IDsStr)
         
         
         for index in 0...2{
@@ -65,11 +65,11 @@ class BKDetailViewController: UIViewController {
         let db = FMDatabase(path: self.dbPath as String)
         if(db.open()){
             
-            let sql = "DELETE FROM USER WHERE name = ? and age = ? and idcode = ?"
-            if(self.nameStr.length != 0 && self.ageStr.length != 0 && self.IDsStr.length != 0){
+            let sql = "DELETE FROM USER WHERE name = ? and score = ? and idcode = ?"
+            if(self.nameStr.length != 0 && self.scoreStr.length != 0 && self.IDsStr.length != 0){
             
                 
-                if( db.executeUpdate(sql, withArgumentsInArray: [self.nameStr,self.ageStr,self.IDsStr]) ){
+                if( db.executeUpdate(sql, withArgumentsInArray: [self.nameStr,self.scoreStr,self.IDsStr]) ){
                     BKNotices.noticeWithTitleTimeViewStyle("删除成功", time: 1, view: self.view, style: BKNoticeStyleSuccess)
                     self.navigationController?.popViewControllerAnimated(true)
                 }else{

@@ -12,7 +12,7 @@ class BKAddressViewCell: UITableViewCell {
 
     
     var nameLabel : UILabel!
-    var ageLabel : UILabel!
+    var scoreLabel : UILabel!
     var ID : UILabel!
     
     
@@ -31,12 +31,12 @@ class BKAddressViewCell: UITableViewCell {
         self.contentView.addSubview(nameLabel)
         
         
-        self.ageLabel = UILabel(frame: CGRectMake(CGRectGetMaxX(self.nameLabel.frame), 0, CGRectGetWidth(self.contentView.frame)/3,CGRectGetHeight(self.contentView.frame)))
-        self.ageLabel.textAlignment = NSTextAlignment.Center
-        self.contentView.addSubview(ageLabel)
+        self.scoreLabel = UILabel(frame: CGRectMake(CGRectGetMaxX(self.nameLabel.frame), 0, CGRectGetWidth(self.contentView.frame)/3,CGRectGetHeight(self.contentView.frame)))
+        self.scoreLabel.textAlignment = NSTextAlignment.Center
+        self.contentView.addSubview(scoreLabel)
         
         
-        self.ID = UILabel(frame: CGRectMake(CGRectGetMaxX(self.ageLabel.frame), 0, CGRectGetWidth(self.contentView.frame) / 3, CGRectGetHeight(self.contentView.frame)))
+        self.ID = UILabel(frame: CGRectMake(CGRectGetMaxX(self.scoreLabel.frame), 0, CGRectGetWidth(self.contentView.frame) / 3, CGRectGetHeight(self.contentView.frame)))
         self.ID.textAlignment = NSTextAlignment.Center
         self.contentView.addSubview(self.ID)
         

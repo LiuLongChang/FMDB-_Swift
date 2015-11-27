@@ -18,9 +18,13 @@
 		943ACE1C1C05B0B40068868B /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE1A1C05B0B40068868B /* success.png */; };
 		943ACE1E1C05B1300068868B /* BKAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE1D1C05B1300068868B /* BKAddressViewController.swift */; };
 		943ACE211C05B9C30068868B /* BKDataFromDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE201C05B9C30068868B /* BKDataFromDataBase.swift */; };
+		943CD2C31C07E813005B4549 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943CD2C21C07E813005B4549 /* ResultTableViewController.swift */; };
+		943CD2C51C07E86E005B4549 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943CD2C41C07E86E005B4549 /* MainTableViewController.swift */; };
+		943CD2C71C07F52B005B4549 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943CD2C61C07F52B005B4549 /* BaseTableViewController.swift */; };
+		943CD2C91C07F5F8005B4549 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943CD2C81C07F5F8005B4549 /* Product.swift */; };
+		943CD2CD1C080B33005B4549 /* TableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943CD2CC1C080B33005B4549 /* TableCell.xib */; };
 		943FE8571C0694770071E786 /* BKAddUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FE8561C0694770071E786 /* BKAddUserViewController.swift */; };
 		943FE8591C06A9AA0071E786 /* BKAddressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FE8581C06A9AA0071E786 /* BKAddressViewCell.swift */; };
-		943FE85B1C06B0870071E786 /* BKSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FE85A1C06B0870071E786 /* BKSearchViewController.swift */; };
 		943FE85D1C06D6860071E786 /* BKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FE85C1C06D6860071E786 /* BKDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,9 +44,13 @@
 		943ACE1D1C05B1300068868B /* BKAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKAddressViewController.swift; sourceTree = "<group>"; };
 		943ACE1F1C05B5A10068868B /* Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		943ACE201C05B9C30068868B /* BKDataFromDataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKDataFromDataBase.swift; sourceTree = "<group>"; };
+		943CD2C21C07E813005B4549 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		943CD2C41C07E86E005B4549 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		943CD2C61C07F52B005B4549 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		943CD2C81C07F5F8005B4549 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		943CD2CC1C080B33005B4549 /* TableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCell.xib; sourceTree = "<group>"; };
 		943FE8561C0694770071E786 /* BKAddUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKAddUserViewController.swift; sourceTree = "<group>"; };
 		943FE8581C06A9AA0071E786 /* BKAddressViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKAddressViewCell.swift; sourceTree = "<group>"; };
-		943FE85A1C06B0870071E786 /* BKSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKSearchViewController.swift; sourceTree = "<group>"; };
 		943FE85C1C06D6860071E786 /* BKDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKDetailViewController.swift; sourceTree = "<group>"; };
 		A01C59400E25DF09FAF00F76 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,11 +100,15 @@
 				943ACE071C05A2880068868B /* ViewController.swift */,
 				943ACE171C05A4000068868B /* BKNotices.swift */,
 				943FE8561C0694770071E786 /* BKAddUserViewController.swift */,
-				943FE85A1C06B0870071E786 /* BKSearchViewController.swift */,
+				943CD2C61C07F52B005B4549 /* BaseTableViewController.swift */,
+				943CD2C41C07E86E005B4549 /* MainTableViewController.swift */,
+				943CD2C21C07E813005B4549 /* ResultTableViewController.swift */,
 				943FE85C1C06D6860071E786 /* BKDetailViewController.swift */,
 				943ACE1D1C05B1300068868B /* BKAddressViewController.swift */,
 				943FE8581C06A9AA0071E786 /* BKAddressViewCell.swift */,
 				943ACE201C05B9C30068868B /* BKDataFromDataBase.swift */,
+				943CD2C81C07F5F8005B4549 /* Product.swift */,
+				943CD2CC1C080B33005B4549 /* TableCell.xib */,
 				943ACE191C05B0B40068868B /* fail.png */,
 				943ACE1A1C05B0B40068868B /* success.png */,
 				943ACE1F1C05B5A10068868B /* Bridge.h */,
@@ -182,6 +194,7 @@
 				943ACE0D1C05A2880068868B /* Assets.xcassets in Resources */,
 				943ACE1C1C05B0B40068868B /* success.png in Resources */,
 				943ACE0B1C05A2880068868B /* Main.storyboard in Resources */,
+				943CD2CD1C080B33005B4549 /* TableCell.xib in Resources */,
 				943ACE1B1C05B0B40068868B /* fail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,15 +254,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				943CD2C51C07E86E005B4549 /* MainTableViewController.swift in Sources */,
 				943FE8571C0694770071E786 /* BKAddUserViewController.swift in Sources */,
-				943FE85B1C06B0870071E786 /* BKSearchViewController.swift in Sources */,
+				943CD2C31C07E813005B4549 /* ResultTableViewController.swift in Sources */,
 				943ACE181C05A4000068868B /* BKNotices.swift in Sources */,
 				943ACE211C05B9C30068868B /* BKDataFromDataBase.swift in Sources */,
+				943CD2C71C07F52B005B4549 /* BaseTableViewController.swift in Sources */,
 				943FE85D1C06D6860071E786 /* BKDetailViewController.swift in Sources */,
 				943ACE081C05A2880068868B /* ViewController.swift in Sources */,
 				943ACE1E1C05B1300068868B /* BKAddressViewController.swift in Sources */,
 				943FE8591C06A9AA0071E786 /* BKAddressViewCell.swift in Sources */,
 				943ACE061C05A2880068868B /* AppDelegate.swift in Sources */,
+				943CD2C91C07F5F8005B4549 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

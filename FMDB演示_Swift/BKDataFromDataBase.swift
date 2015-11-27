@@ -14,7 +14,7 @@ class BKDataFromDataBase: NSObject {
     
     
     var nameFromClass : NSString!
-    var ageFromClass : NSString!
+    var scoreFromClass : NSString!
     var IDFromClass : NSString!
     var nameArrayFromClass : NSMutableArray!
     
@@ -41,7 +41,7 @@ class BKDataFromDataBase: NSObject {
     override init() {
         
         nameFromClass = ""
-        ageFromClass = ""
+        scoreFromClass = ""
         IDFromClass = ""
         nameArrayFromClass = NSMutableArray(capacity: 0)
         

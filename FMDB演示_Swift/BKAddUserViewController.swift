@@ -15,7 +15,7 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
     var textFieldArray : NSMutableArray!
     var dbPath : NSString!
     var nameTextField : UITextField!
-    var ageTextField : UITextField!
+    var scoreTextField : UITextField!
     var IDTextField : UITextField!
     var operateType : NSInteger!
     
@@ -38,7 +38,7 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
         let path = doc.stringByAppendingPathComponent("user.sqlite")
         self.dbPath = path
         
-        let array = NSArray(objects: "姓名","年龄","ID")
+        let array = NSArray(objects: "昵称/姓名","分值","队员ID")
         
         
         for(var index : Int = 0;index < array.count; index++){
@@ -52,24 +52,24 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
         
         
         
-        nameTextField = UITextField(frame: CGRectMake(150,138,100,30))
+        nameTextField = UITextField(frame: CGRectMake(150,138,150,30))
         nameTextField.borderStyle = UITextBorderStyle.RoundedRect
-        nameTextField.placeholder = "请输入姓名"
+        nameTextField.placeholder = "请输入姓名/昵称"
         nameTextField.delegate = self
         self.view.addSubview(nameTextField)
         
         
-        ageTextField = UITextField(frame: CGRectMake(150,178,100,30))
-        ageTextField.borderStyle = UITextBorderStyle.RoundedRect
-        ageTextField.placeholder = "请输入年龄"
-        ageTextField.delegate = self
-        self.view.addSubview(ageTextField)
+        scoreTextField = UITextField(frame: CGRectMake(150,178,150,30))
+        scoreTextField.borderStyle = UITextBorderStyle.RoundedRect
+        scoreTextField.placeholder = "请输入分值"
+        scoreTextField.delegate = self
+        self.view.addSubview(scoreTextField)
         
         
         
-        IDTextField = UITextField(frame: CGRectMake(150,218,100,30))
+        IDTextField = UITextField(frame: CGRectMake(150,218,150,30))
         IDTextField.borderStyle = UITextBorderStyle.RoundedRect
-        IDTextField.placeholder = "请输入ID"
+        IDTextField.placeholder = "请输入队员ID"
         IDTextField.delegate = self
         self.view.addSubview(IDTextField)
         
@@ -77,7 +77,7 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
         if(operateType == 1){
             nameTextField.text = BKDataFromDataBase.shareInstance().nameFromClass as NSString as String
             IDTextField.text = BKDataFromDataBase.shareInstance().IDFromClass as NSString as String
-            ageTextField.text = BKDataFromDataBase.shareInstance().ageFromClass as NSString as String
+            scoreTextField.text = BKDataFromDataBase.shareInstance().scoreFromClass as NSString as String
             IDTextField.enabled = false
         }
         
@@ -111,7 +111,7 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
         let db = FMDatabase(path: self.dbPath as String)
         if(db.open()){
             
-            if((nameTextField.text! as NSString).length == 0 || (ageTextField.text! as NSString).length == 0 || (IDTextField.text! as NSString).length == 0){
+            if((nameTextField.text! as NSString).length == 0 || (scoreTextField.text! as NSString).length == 0 || (IDTextField.text! as NSString).length == 0){
                 
                 BKNotices.noticeWithTitleTimeViewStyle("请完成填写信息", time: 1.5, view: self.view, style: BKNoticeStyleFail)
                 
@@ -120,15 +120,15 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
                 
                 
                 
-                print("姓名：%@,年龄：%@,ID:%@",nameTextField.text,ageTextField.text,IDTextField.text)
+                print("姓名：%@,年龄：%@,ID:%@",nameTextField.text,scoreTextField.text,IDTextField.text)
                 var sql : String = ""
                 if(self.operateType == 0){
-                    sql = "INSERT INTO USER (name,age,idcode) VALUES (?,?,?)"
+                    sql = "INSERT INTO USER (name,score,idcode) VALUES (?,?,?)"
                 }else if(self.operateType == 1){
-                    sql = "UPDATE USER SET name = ?,age = ? where idcode = ?"
+                    sql = "UPDATE USER SET name = ?,score = ? where idcode = ?"
                 }
                 
-                let res = db.executeUpdate(sql, withArgumentsInArray: [nameTextField.text!,ageTextField.text!,IDTextField.text!]) as Bool
+                let res = db.executeUpdate(sql, withArgumentsInArray: [nameTextField.text!,scoreTextField.text!,IDTextField.text!]) as Bool
                 
                 
                 if(!res){
@@ -152,10 +152,10 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
         if(operateType1 == 0){
             
             nameTextField.resignFirstResponder()
-            ageTextField.resignFirstResponder()
+            scoreTextField.resignFirstResponder()
             IDTextField.resignFirstResponder()
             nameTextField.text = ""
-            ageTextField.text = ""
+            scoreTextField.text = ""
             IDTextField.text = ""
             self.navigationController?.popViewControllerAnimated(true)
             
@@ -171,7 +171,7 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
         nameTextField.resignFirstResponder()
-        ageTextField.resignFirstResponder()
+        scoreTextField.resignFirstResponder()
         IDTextField.resignFirstResponder()
         
     }
@@ -181,7 +181,7 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
         
         super.viewWillDisappear(animated)
         nameTextField.text = ""
-        ageTextField.text = ""
+        scoreTextField.text = ""
         IDTextField.text = ""
         
         
