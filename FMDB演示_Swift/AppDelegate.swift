@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+let num1 : Int = 101
+let num2 : Int = 102
+let num3 : Int = 103
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,25 +23,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
+        UINavigationBar.appearance().backgroundColor = UIColor.yellowColor()
+        
+        
+        
         let tabbar = UITabBarController()
         
         
         let addressVC = BKAddressViewController()
         let addressNC = UINavigationController(rootViewController: addressVC)
-        addressNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Contacts, tag: 101)
+        addressVC.title = "查看插入历史"
+        addressNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.History, tag: num1)
         
         
         
         
         let addUserVC = BKAddUserViewController()
         let addUserNC = UINavigationController(rootViewController: addUserVC)
-        addUserNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Favorites, tag: 102)
+        addUserVC.title  = "添加新信息"
+        addUserNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Bookmarks, tag: num2)
         
         
         
         let searchVC = MainTableViewController()
         let searchNC = UINavigationController(rootViewController: searchVC)
-        searchNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Search, tag: 103)
+        searchVC.title  = "历史查询"
+        searchNC.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Search, tag: num3)
         
         
         

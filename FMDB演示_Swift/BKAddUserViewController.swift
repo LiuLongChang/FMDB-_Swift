@@ -33,7 +33,7 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
         
         
         
-        self.view.backgroundColor = UIColor.whiteColor();
+        self.view.backgroundColor = UIColor(white: 0.5, alpha:0.5);
         let doc = (NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true) as NSArray).objectAtIndex(0)
         let path = doc.stringByAppendingPathComponent("user.sqlite")
         self.dbPath = path
@@ -85,7 +85,7 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
         
         if(operateType == 0){
             
-            let addBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addNewUserInfo")
+            let addBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Save, target: self, action: "addNewUserInfo")
             self.navigationItem.rightBarButtonItem = addBtn;
             
         }
@@ -113,7 +113,7 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
             
             if((nameTextField.text! as NSString).length == 0 || (scoreTextField.text! as NSString).length == 0 || (IDTextField.text! as NSString).length == 0){
                 
-                BKNotices.noticeWithTitleTimeViewStyle("请完成填写信息", time: 1.5, view: self.view, style: BKNoticeStyleFail)
+                BKAndicator.andicatorWithTitleTimeViewStyle("请完成填写信息", time: 1.5, view: self.view, style: BKAndicatorStyleFail)
                 
             }else{
              
@@ -133,11 +133,11 @@ class BKAddUserViewController: UIViewController,UITextFieldDelegate {
                 
                 if(!res){
                     
-                    BKNotices.noticeWithTitleTimeViewStyle("数据插入错误", time: 1.5, view: self.view, style: BKNoticeStyleFail)
+                    BKAndicator.andicatorWithTitleTimeViewStyle("数据插入错误", time: 1.5, view: self.view, style: BKAndicatorStyleFail)
                     
                 }else{
                     
-                    BKNotices.noticeWithTitleTimeViewStyle("数据插入成功", time: 1.5, view: self.view, style: BKNoticeStyleSuccess)
+                    BKAndicator.andicatorWithTitleTimeViewStyle("数据插入成功", time: 1.5, view: self.view, style: BKAndicatorStyleSuccess)
                     
                 }
                 

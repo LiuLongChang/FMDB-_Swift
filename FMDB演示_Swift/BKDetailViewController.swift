@@ -70,10 +70,10 @@ class BKDetailViewController: UIViewController {
             
                 
                 if( db.executeUpdate(sql, withArgumentsInArray: [self.nameStr,self.scoreStr,self.IDsStr]) ){
-                    BKNotices.noticeWithTitleTimeViewStyle("删除成功", time: 1, view: self.view, style: BKNoticeStyleSuccess)
+                    BKAndicator.andicatorWithTitleTimeViewStyle("删除成功", time: 1, view: self.view, style: BKAndicatorStyleSuccess)
                     self.navigationController?.popViewControllerAnimated(true)
                 }else{
-                    BKNotices.noticeWithTitleTimeViewStyle("删除失败", time: 1, view: self.view, style: BKNoticeStyleFail)
+                    BKAndicator.andicatorWithTitleTimeViewStyle("删除失败", time: 1, view: self.view, style: BKAndicatorStyleFail)
                 }
                 
                 

@@ -49,6 +49,9 @@ class MainTableViewController: BaseTableViewController,UISearchBarDelegate,UISea
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
+        self.view.backgroundColor = UIColor.magentaColor()
+        
+        
         self.products = NSMutableArray()
         self.searchResultArray = NSMutableArray()
         

@@ -13,7 +13,7 @@
 		943ACE0B1C05A2880068868B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE091C05A2880068868B /* Main.storyboard */; };
 		943ACE0D1C05A2880068868B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE0C1C05A2880068868B /* Assets.xcassets */; };
 		943ACE101C05A2880068868B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE0E1C05A2880068868B /* LaunchScreen.storyboard */; };
-		943ACE181C05A4000068868B /* BKNotices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE171C05A4000068868B /* BKNotices.swift */; };
+		943ACE181C05A4000068868B /* BKAndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE171C05A4000068868B /* BKAndicator.swift */; };
 		943ACE1B1C05B0B40068868B /* fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE191C05B0B40068868B /* fail.png */; };
 		943ACE1C1C05B0B40068868B /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 943ACE1A1C05B0B40068868B /* success.png */; };
 		943ACE1E1C05B1300068868B /* BKAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943ACE1D1C05B1300068868B /* BKAddressViewController.swift */; };
@@ -38,7 +38,7 @@
 		943ACE0C1C05A2880068868B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		943ACE0F1C05A2880068868B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		943ACE111C05A2880068868B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		943ACE171C05A4000068868B /* BKNotices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKNotices.swift; sourceTree = "<group>"; };
+		943ACE171C05A4000068868B /* BKAndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKAndicator.swift; sourceTree = "<group>"; };
 		943ACE191C05B0B40068868B /* fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fail.png; sourceTree = "<group>"; };
 		943ACE1A1C05B0B40068868B /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
 		943ACE1D1C05B1300068868B /* BKAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BKAddressViewController.swift; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			children = (
 				943ACE051C05A2880068868B /* AppDelegate.swift */,
 				943ACE071C05A2880068868B /* ViewController.swift */,
-				943ACE171C05A4000068868B /* BKNotices.swift */,
+				943ACE171C05A4000068868B /* BKAndicator.swift */,
 				943FE8561C0694770071E786 /* BKAddUserViewController.swift */,
 				943CD2C61C07F52B005B4549 /* BaseTableViewController.swift */,
 				943CD2C41C07E86E005B4549 /* MainTableViewController.swift */,
@@ -257,7 +257,7 @@
 				943CD2C51C07E86E005B4549 /* MainTableViewController.swift in Sources */,
 				943FE8571C0694770071E786 /* BKAddUserViewController.swift in Sources */,
 				943CD2C31C07E813005B4549 /* ResultTableViewController.swift in Sources */,
-				943ACE181C05A4000068868B /* BKNotices.swift in Sources */,
+				943ACE181C05A4000068868B /* BKAndicator.swift in Sources */,
 				943ACE211C05B9C30068868B /* BKDataFromDataBase.swift in Sources */,
 				943CD2C71C07F52B005B4549 /* BaseTableViewController.swift in Sources */,
 				943FE85D1C06D6860071E786 /* BKDetailViewController.swift in Sources */,

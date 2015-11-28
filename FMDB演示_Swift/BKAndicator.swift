@@ -12,12 +12,12 @@ import UIKit
 typealias MyInt = Int
 
 
-let BKNoticeStyleSuccess : MyInt = 0
-let BKNoticeStyleFail : MyInt = 1
+let BKAndicatorStyleSuccess : MyInt = 0
+let BKAndicatorStyleFail : MyInt = 1
 
 
 
-class BKNotices: UIView {
+class BKAndicator: UIView {
     
     var image:UIImageView!
     var message:UILabel!
@@ -42,7 +42,7 @@ class BKNotices: UIView {
     
     func dc_setupView(){
         
-        self.backgroundColor = UIColor(white: 0.1, alpha: 0.9)
+        self.backgroundColor = UIColor(white: 0.3, alpha: 0.9)
         self.image = UIImageView()
         image?.frame = CGRectMake(34, 10, 32, 32);
         image?.image = UIImage(named: "success");
@@ -59,9 +59,9 @@ class BKNotices: UIView {
     }
     
     
-    class func noticeWithTitleTimeViewStyle(title:NSString,time:NSTimeInterval,view:UIView,style:MyInt)->Void{
+    class func andicatorWithTitleTimeViewStyle(title:NSString,time:NSTimeInterval,view:UIView,style:MyInt)->Void{
         
-        let notice : BKNotices = BKNotices(frame: CGRectMake(0,0,100,80));
+        let notice : BKAndicator = BKAndicator(frame: CGRectMake(0,0,100,80));
         
         switch(style){
             case 0:
@@ -103,7 +103,7 @@ class BKNotices: UIView {
     
     class func timeAction(sender:NSTimer)->Void{
         
-        let notices : BKNotices = (sender.userInfo?.valueForKey("dd"))! as! BKNotices
+        let notices : BKAndicator = (sender.userInfo?.valueForKey("dd"))! as! BKAndicator
         
         
         UIView.animateWithDuration(0.5, animations: { () -> Void in

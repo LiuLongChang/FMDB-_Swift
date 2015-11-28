@@ -28,9 +28,9 @@ class BKAddressViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.cyanColor()
         self.tableView.registerClass(BKAddressViewCell.classForCoder(), forCellReuseIdentifier: "Cell")
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "modifyDatabase")
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Redo, target: self, action: "modifyDatabase")
         
     }
     
@@ -128,7 +128,7 @@ class BKAddressViewController: UITableViewController {
         let indexPath = self.tableView.indexPathForSelectedRow
         if(indexPath == nil){
             
-            BKNotices.noticeWithTitleTimeViewStyle("数据更新", time: 1.5, view: self.view, style: BKNoticeStyleSuccess)
+            BKAndicator.andicatorWithTitleTimeViewStyle("Data Refreshed", time: 1.5, view: self.view, style: BKAndicatorStyleSuccess)
             return
             
         }else{
